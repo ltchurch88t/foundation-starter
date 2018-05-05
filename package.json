@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "foundation-sites": "^6.4.4-rc1",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-ruby-sass": "^3.0.0"
+  }
+}
