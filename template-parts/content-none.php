@@ -9,12 +9,12 @@
 
 ?>
 
-<section class="container">
-	<header class="row">
-		<h1 class="h3"><?php esc_html_e( 'Nothing Found', 'starter' ); ?></h1>
+<section class="grid-container">
+	<header class="cell">
+		<h1><?php esc_html_e( 'Nothing Found', 'starter' ); ?></h1>
 	</header><!-- .page-header -->
 
-	<div class="container">
+	<div class="grid-container">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 

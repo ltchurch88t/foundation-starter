@@ -15,8 +15,8 @@
 get_header();
 ?>
 
-	<div id="primary" class="container">
-		<main id="main" class="row justify-content-start">
+	<div id="primary" class="grid-container fluid">
+		<main id="main" class="grid-y">
 
 		<?php
 		if ( have_posts() ) :
@@ -24,7 +24,7 @@ get_header();
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
-					<h1 class="h1"><?php single_post_title(); ?></h1>
+					<h1 class="cell"><?php single_post_title(); ?></h1>
 				</header>
 				<?php
 			endif;
@@ -55,5 +55,8 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
+// Default sidebar is set to off as it looks much cleaner on layout. Simply uncomment to activate
+// get_sidebar();
+
 get_footer();

@@ -10,15 +10,15 @@
 get_header();
 ?>
 
-	<div id="primary" class="contianer">
-		<main id="main" class="site-main">
+	<div id="primary" class="grid-contianer">
+		<main id="main" class="grid-x">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'starter' ); ?></h1>
+			<section class="cell">
+				<header class="cell">
+					<h1 class="cell subheader"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'starter' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<div class="page-content">
+				<div class="cell">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'starter' ); ?></p>
 
 					<?php

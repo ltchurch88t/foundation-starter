@@ -10,11 +10,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="container">
-		<?php the_title( sprintf( '<h2 class="h2"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	<header class="grid-container">
+		<?php the_title( sprintf( '<h2 class="cell"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="text-muted">
+		<div class="cell subheader">
 			<?php
 			starter_posted_on();
 			starter_posted_by();
@@ -25,11 +25,11 @@
 
 	<?php starter_post_thumbnail(); ?>
 
-	<div class="container">
+	<div class="grid-x">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<footer class="container">
+	<footer class="grid-container">
 		<?php starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

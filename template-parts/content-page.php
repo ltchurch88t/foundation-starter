@@ -10,13 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="container">
-		<?php the_title( '<h1 class="h1">', '</h1>' ); ?>
+	<header class="grid-container">
+		<?php the_title( '<h1 class="cell">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php starter_post_thumbnail(); ?>
 
-	<div class="container">
+	<div class="grid-container">
 		<?php
 		the_content();
 
@@ -28,13 +28,13 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="container">
+		<footer class="grid-container">
 			<?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="h6">%s</span>', 'starter' ),
+						__( 'Edit <span class="subheader">%s</span>', 'starter' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -43,7 +43,7 @@
 					),
 					get_the_title()
 				),
-				'<span class="text-muted">',
+				'<span class="cell subheader">',
 				'</span>'
 			);
 			?>

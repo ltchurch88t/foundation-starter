@@ -21,37 +21,45 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="container">
 
-	<header id="masthead" class="jumbotron jumbotron-fluid">
-		<div class="container">
+	<header id="header" class="container">
+
+		<nav id="site-navigation" class="top-bar">
+			<div class="top-bar-left">
+				<ul class="dropdown menu" data-dropdown-menu>
+					<li class="menu-text"><?php bloginfo( 'name' );?></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+				</ul>
+			</div>
+			<div class="top-bar-right">
+				<ul class="menu">
+					<li><input type="search" placeholder="Search"></li>
+					<li><button type="button" class="button">Search</button></li>
+				</ul>
+			</div>
+		</nav><!-- #site-navigation -->
+
+		<div class="grid-x">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="display-3" id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 id="cell site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
 				?>
-				<p class="display-3" id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<h3 id="cell site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
 				<?php
 			endif;
 			$starter_description = get_bloginfo( 'description', 'display' );
 			if ( $starter_description || is_customize_preview() ) :
 				?>
-				<p class="text-muted" id="site-description"><?php echo $starter_description; /* WPCS: xss ok. */ ?></p>
+				<h4 class="cell subheader" id="site-description"><?php echo $starter_description; /* WPCS: xss ok. */ ?></h4>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="nav">
-			<button class="btn btn-primary"><?php esc_html_e( 'Primary Menu', 'starter' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	</header><!-- #header -->
 
 	<div id="content" class="container">

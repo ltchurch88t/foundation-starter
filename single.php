@@ -10,8 +10,8 @@
 get_header();
 ?>
 
-	<div id="primary" class="container">
-		<main id="main" class="row">
+	<div id="primary" class="grid-container">
+		<main id="main" class="cell">
 
 		<?php
 		while ( have_posts() ) :
@@ -33,5 +33,8 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
+// Default sidebar is set to off as it looks much cleaner on layout. Simply uncomment to activate
+// get_sidebar();
+
 get_footer();
