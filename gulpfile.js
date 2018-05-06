@@ -5,7 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('sass', () =>
-	sass('styles/style.scss')
+	sass('styles/style.sass')
 		.on('error', sass.logError)
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
@@ -18,7 +18,7 @@ gulp.task('sass', () =>
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('styles/**/*.scss', ['sass']);
+  gulp.watch('styles/**/*.sass', ['sass']);
 
   gulp.watch('*.php', livereload.reload)
 
